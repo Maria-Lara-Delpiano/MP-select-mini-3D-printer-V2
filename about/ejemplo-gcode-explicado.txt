@@ -1,0 +1,97 @@
+;FLAVOR:Marlin
+// firmware se llama Marlin 
+;TIME:1267
+// tiempo total estimado de impresión en segundos 
+;Filament used: 0.402133m
+//cantidad estimada de filamento a usar
+;Layer height: 0.13125
+//altura de cada capa en mm
+;MINX:45.768
+;MINY:45.77
+;MINZ:0.306
+;MAXX:74.599
+;MAXY:74.6
+;MAXZ:20.832
+// dimensiones mínimas y máximas de mi impresion en cada eje
+;Generated with Cura_SteamEngine 5.4.0
+
+M140 S80
+// M140 controla la t° de la cama y S80 indica que sean 80°C
+M105
+////solicita la lectura de la temperatura actual de la cama o extrusor
+M190 S80
+//M190 espera a que la cama alcance los 80° antes de comenzar
+M104 S245
+//M104 establece temperatura del extrusor a 245°
+M105
+////solicita la lectura de la temperatura actual de la cama o extrusor
+M109 S245
+//M109 espera a que el extrusor llegue a 245° antes de iniciar
+
+M82 ;absolute extrusion mode
+//In absolute mode, the origin point is always used for reference on 
+//how much to extrude. In relative mode, the set amount to extrude is 
+//added to its previous extrusion value.
+
+G21;(metric values)
+// milimetro como métrica
+
+G90;(absolute positioning)
+//Cambia el modo de posicionamiento a absoluto, lo que significa que las 
+//coordenadas se interpretarán como posiciones absolutas en el espacio de impresión.
+
+M82;(set extruder to absolute mode)
+
+M107;(start with the fan off)
+//fan= ventilador
+
+G28;(Home the printer)
+
+G92 E0;(Reset the extruder to 0)
+// Establece la posición actual del extrusor en 0.
+
+G0 Z5 E5 F500;(Move up and prime the nozzle)
+//  Mueve el eje Z hacia arriba 5 mm y extruye
+// 5 mm de filamento para preparar la boquilla. a una velocidad de 500mm/min
+
+G0 X-1 Z0;(Move outside the printable area)
+// Mueve el eje X ligeramente fuera del área imprimible
+
+G1 Y60 E8 F500;(Draw a priming/wiping line to the rear)
+// Extruye 8 mm de filamento mientras se desplaza a lo largo del eje Y, creando una
+// línea para purgar y limpiar la boquilla.
+
+G1 X-1;(Move a little closer to the print area)
+
+G1 Y10 E16 F500;(draw more priming/wiping)
+//Extruye 16 mm de filamento mientras se desplaza 
+//en el eje Y, creando otra línea de purga y limpieza.
+
+G1 E15 F250;(Small retract)
+
+G92 E0;(Zero the extruder)
+//Reinicia la posición actual del extrusor a 0.
+G92 E0
+G92 E0
+G1 F2400 E-4
+//mueva la boquilla a una velocidad de 2400 mm/min 
+//mientras realiza una pequeña retracción de 4 mm en el filamento
+
+;LAYER_COUNT:152
+;LAYER:-5
+M107
+//apaga el ventilador
+
+G0 F7200 X46.839 Y47.417 Z0.306
+//movimiento lineal no controlado,punto de partida
+;TYPE:SUPPORT-INTERFACE
+G1 F2400 E0
+G1 F1125 X47.359 Y46.904 E0.07434
+G1 X47.819 Y46.552 E0.13329
+G1 X48.311 Y46.265 E0.19127
+G1 X48.851 Y46.036 E0.25096
+G1 X49.524 Y45.847 E0.32211
+G1 X50.39 Y45.77 E0.41059
+G1 X70.043 Y45.772 E2.4108
+G1 X70.845 Y45.841 E2.49272
+
