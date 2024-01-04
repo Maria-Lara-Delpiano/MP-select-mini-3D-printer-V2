@@ -1,0 +1,21 @@
+Para lograr un bello objeto 3d, se debe de comprender los aspectos básicos de los archivos 
+STL y G-code,  que son esenciales para el proceso de impresión.
+
+El archivo STL («stereolithography» o «Standard Triangle Language») representa el objeto que se
+desea crear, guarda información sobre un modelo en 3D y reproduce la superficie del modelo mediante 
+triángulos enlazados que describen la geometría de la superficie de un  un modelo tridimensional.
+( Esta forma de describir objetos mediante formas geométricas se denomina teselación.)
+
+ La mayoría de impresoras 3d no pueden usar stl directamente, por lo que es necesario convertir a G-code,
+entonces, el G-Code Representa el cómo se hará para que la máquina pueda crear el objeto descrito en el STL. 
+Consta de comandos G y M, cada uno de ellos con un movimiento o acción asignado. 
+Este es un lenguaje generado automaticamente por el software de corte al convertir el modelo 3d 
+en un archivo STL, no debemos de escribirlo nosotros mismos (aunque en teoría podríamos)
+
+
+Las letras X / Y / Z hacen referencia a los tres ejes de la impresora 3D que marcan las coordenadas. 
+Cualquier valor de X por encima de 0 mueve el cabezal de impresión hacia la derecha, cualquier valor de
+Y por encima de 0 mueve el cabezal de impresión hacia atrás, y cualquier valor de Z por encima de 0 mueve 
+el cabezal de impresión hacia arriba. Por otro lado, la letra F se entiende como la velocidad a la que 
+se mueve la boquilla (indicada en mm/minuto), mientras que la letra E se refiere a la longitud del
+movimiento (indicada en milímetros).
