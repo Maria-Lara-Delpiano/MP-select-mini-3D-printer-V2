@@ -1,3 +1,7 @@
+
+el siguiente es un código gcode "intervenido". Luego de cada línea de código viene una linea de explicación, las cuales inicial con "//" 
+
+
 ;FLAVOR:Marlin
 // firmware se llama Marlin 
 ;TIME:1267
