@@ -1,5 +1,5 @@
 
-el siguiente es un código gcode "intervenido". Luego de cada línea de código viene una linea de explicación, las cuales inicial con "//" 
+"The following is an 'intervened' G-code. After each line of code, there is a brief explanation, which begins with '//' (but note, for now, they are in Spanish)." 
 
 
 ;FLAVOR:Marlin
